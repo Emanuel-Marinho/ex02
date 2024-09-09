@@ -26,7 +26,17 @@ public class Conta {
         System.out.println("Depósito feito com sucesso!");
     }
 
+    public void transferir(Conta outraConta, double valor) {
+        if(valor > this.saldo) {
+            System.out.println("Saldo insuficiente");
+        } else {
+            this.saldo -= valor;
+            outraConta.saldo += valor;
+            System.out.println("Transferência realizada com sucesso!");
+        }
+    }
+
     public void mostrarAtributos() {
-    System.out.println("Cpf: " + this.cpf + "\nBanco: " + this.banco + "\nSaldo: "  + this.saldo);
+        System.out.println("Cpf: " + this.cpf + "\nBanco: " + this.banco + "\nSaldo: "  + this.saldo);
     }
 }

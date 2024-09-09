@@ -16,5 +16,12 @@ public class Main {
         conta2.correntistaEspecial = true;
 
         System.out.println(conta2.bonificarCorrentista());
+        System.out.println("\n\n\n");
+        System.out.println(conta1.saldo);
+        System.out.println(conta2.saldo);
+        conta1.transferir(conta2, 1000.0);
+        System.out.println(conta1.saldo);
+        System.out.println(conta2.saldo);
+
     }
 }
